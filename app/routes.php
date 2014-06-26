@@ -39,7 +39,8 @@ Route::get('/sayhello/{name}', function($name)
 
 Route::get('/rolldice', function() {
 
-	return mt_rand(1, 6);
+	$randNum = mt_rand(1, 6);
+	return View::make('roll-dice')->with('number', $randNum);
 
 });
 
