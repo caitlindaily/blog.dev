@@ -10,20 +10,15 @@
 | and give it the Closure to execute when that URI is requested.
 |
 */
-Route::get('/', function(){
+Route::get('/', 'HomeController@showHomepage');
 
-	return View::make('temp.my-first-view');
-});
+Route::get('/resume', 'HomeController@showResume');
 
-Route::get('/resume', function(){
-	
-	return "This is my resume.";
-});
+Route::get('/portfolio', 'HomeController@showPortfolio');
 
-Route::get('/portfolio', function(){
-	
-	return "This is my portfolio.";
-});
+
+
+
 
 Route::get('/sayhello/{name}', function($name)
 {
