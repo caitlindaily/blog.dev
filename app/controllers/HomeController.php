@@ -17,17 +17,26 @@ class HomeController extends BaseController {
 
 	public function showHomepage()
 	{
-		return View::make('homepage');
+		return View::make('pages.homepage');
 	}
 
 	public function showResume()
 	{
-		return View::make('resume');
+		return View::make('pages.resume');
 	}
 
 	public function showPortfolio()
 	{
 		return View::make('portfolio');
 	}
+
+	public function sayHello($name)
+	{
+        $data = [
+
+         	'name' => $name
+         ];
+         return View::make('temp.my-first-view')->with($data);
+    }
 
 }
