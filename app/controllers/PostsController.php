@@ -10,12 +10,13 @@ class PostsController extends \BaseController {
 
 	public function create()
 	{
-		Log::info(Input::all());
+		
 		return View::make('posts.create');
 	}
 
 	public function store()
 	{
+		Log::info(Input::all());
 		return Redirect::back()->withInput();
 	}
 
