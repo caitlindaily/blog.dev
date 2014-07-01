@@ -17,7 +17,7 @@ class PostsController extends \BaseController {
 
 	public function store()
 	{
-		//Create instance of validator and use make. Want ot validate all input with the rules from Post.
+		//Create instance of validator and use make. Want to validate all input with the rules from Post.
 		$validator = Validator::make(Input::all(), Post::$rules);
 
 		if ($validator->fails()) {
@@ -44,13 +44,19 @@ class PostsController extends \BaseController {
 
 	public function edit($id)
 	{
-		return "Show a form for editing a specific post.";
+		$post = Post::find($id);
+		return View::make('posts.edit')->with('post', $post);
+		
 	}
 
 
 	public function update($id)
 	{
-		return "Update a specific post.";
+		$post = Post::find($id);
+		$post->title = Input::get('title');
+		$post->body = Input::get('body');
+		$post->save();
+		return Redirect::action('PostsController@index');
 	}
 
 
