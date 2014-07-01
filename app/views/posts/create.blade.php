@@ -7,6 +7,10 @@
 	<title>Create New Posts</title>
 </head>
 <body>
+	<h1>Create New Posts</h1>
+	@if ($errors->has('title'))
+		{{ $errors->first('title', '<span class="help-block">:message</span>') }}
+	@endif	
 
 <form action="{{{ action('PostsController@store') }}}" method="POST">
 	<label for="title">Title</label>
