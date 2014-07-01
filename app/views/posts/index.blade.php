@@ -12,7 +12,8 @@
   <tr>
 	@foreach ($posts as $post) 
 	  <td>{{ link_to_action('PostsController@show', $post->title, [$post->id]) }}</td>
-	  <td>{{ $post->created_at }}</td>
+	  <td>{{ $post->created_at->setTimezone('America/Chicago')->format('l, F jS Y @ h:i A') }}<br>
+	  	  {{ $post->created_at->diffForHumans() }}</td>
 	  <td>{{ link_to_action('PostsController@edit', 'Edit', [$post->id]) }}</td>	
   </tr>
   	@endforeach		
