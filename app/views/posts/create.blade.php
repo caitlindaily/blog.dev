@@ -12,16 +12,15 @@
 		{{ $errors->first('title', '<span class="help-block">:message</span>') }}
 	@endif	
 
-<form action="{{{ action('PostsController@store') }}}" method="POST">
-	<label for="title">Title</label>
-	<input type="text-area" id="title" name="title" value="{{{ Input::old('title') }}}">
-	<br>
-	<label for="body">Body</label>
-	<textarea id="body" name="body">{{{ Input::old('body') }}}</textarea>
-	<br>
-	<input type="submit">
-</form>
-
+	{{ Form::open(array('action' => 'PostsController@store')) }}
+		{{ Form::label('title', 'Title') }}
+		{{ Form::text('title') }}
+		<br>
+		{{ Form::label('body', 'Post Body') }}
+		{{ Form::textarea('body') }}
+		<br>
+		{{ Form::submit('Submit') }}
+	{{ Form::close() }}	
 </body>
 </html>
 @stop
