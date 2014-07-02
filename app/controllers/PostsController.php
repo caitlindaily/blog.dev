@@ -3,6 +3,15 @@
 class PostsController extends \BaseController {
 
 
+	public function __construct()
+	{
+    // call base controller constructor
+    	parent::__construct();
+
+    // run auth filter before all methods on this controller except index and show
+    	$this->beforeFilter('auth.basic', array('except' => array('index', 'show')));
+	}
+
 	public function index()
 	{
 		$posts = Post::paginate(5);;
@@ -22,6 +31,7 @@ class PostsController extends \BaseController {
 
 		if ($validator->fails()) {
 
+			Session::flash('errorMessage', 'There were errors with your submission.');
 			return Redirect::back()->withInput()->withErrors($validator);
 
 		} else {
@@ -30,8 +40,11 @@ class PostsController extends \BaseController {
 			$post->title = Input::get('title');
 			$post->body = Input::get('body');
 			$post->save();
+			Session::flash('successMessage', 'Post was created successfully!!!');
 			return Redirect::action('PostsController@index');
+
 		}
+
 	}
 
 
@@ -56,6 +69,7 @@ class PostsController extends \BaseController {
 
 		if ($validator->fails()) {
 
+			Session::flash('errorMessage', 'There were errors with your update.');
 			return Redirect::back()->withInput()->withErrors($validator);
 
 		} else {
@@ -64,6 +78,7 @@ class PostsController extends \BaseController {
 			$post->title = Input::get('title');
 			$post->body = Input::get('body');
 			$post->save();
+			Session::flash('successMessage', 'Your post was updated!!!');
 			return Redirect::action('PostsController@index');
 		}
 	}
@@ -71,7 +86,10 @@ class PostsController extends \BaseController {
 
 	public function destroy($id)
 	{
-		return "Delete a specific post.";
+		$post = Post::findOrFail($id);
+		$post->delete();
+		Session::flash('successMessage', 'Post was successfully deleted.');
+		return Redirect::action('PostsController@index');
 	}
 
 
