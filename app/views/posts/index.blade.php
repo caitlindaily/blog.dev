@@ -9,6 +9,7 @@
 	  <tr>	
 		<th>Title</th>
 		<th>Date Created</th>
+		<th>Author</th>
 		<th>Action</th>
 	  </tr>	
 	  <tr>
@@ -16,6 +17,7 @@
 		  <td>{{ link_to_action('PostsController@show', $post->title, $post->id) }}</td>
 		  <td>{{ $post->created_at->setTimezone('America/Chicago')->format('l, F jS Y @ h:i A') }}<br>
 		  	  {{ $post->created_at->diffForHumans() }}</td>
+		  <td>{{ $post->user->email }}</td>	  
 		  <td>{{ link_to_action('PostsController@edit', 'Edit', $post->id) }}
 		  	  {{ Form::open(array('action' => array('PostsController@destroy', $post->id), 'method' => 'DELETE')) }}
 				{{ Form::submit('Delete') }}
