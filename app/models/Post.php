@@ -12,4 +12,8 @@ class Post extends BaseModel {
     	'body' => 'required'
     ];
 
+    public function user() {
+
+        return $this->hasMany('User');
+    }
 }
