@@ -1,6 +1,6 @@
 <?php
 
-class Post extends Eloquent {
+class Post extends BaseModel {
 
 	//The db table that this model relates to
     protected $table = 'posts';
@@ -8,7 +8,8 @@ class Post extends Eloquent {
     //Validation rules for our model properties
     //Static means you don't need to create an instance to use it
     static public $rules = [
-    	'title' => 'required|max:100'
+    	'title' => 'required|max:100',
+    	'body' => 'required'
     ];
 
 }
