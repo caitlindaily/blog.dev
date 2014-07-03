@@ -23,14 +23,14 @@
 	  </tr>
 	  	@endforeach		
 	</table>
-	
+
 	<!--Create Post link-->	
 		<div>
 			<p>{{ link_to_action('PostsController@create', 'Create New Post') }}</p>
 		</div>
 	<!--Pagination-->
 	<div>	
-		{{ $posts->links() }}
+		{{ $posts->appends(['search'=> Input::get('search')])->links() }}
 	<div>	
 
 	<!--Search Field-->
