@@ -1,16 +1,16 @@
 body {
   background-color: #f2f2f2;
-    font-family: 'EB Garamond', serif;
+    font-family: 'Oswald', sans-serif;
     font-weight: 300;
     font-size: 16px;
-    color: #555;
+    color: #E8B154;
 
     -webkit-font-smoothing: antialiased;
     -webkit-overflow-scrolling: touch;
 }
 
 #projectBody {
-    background-image: url("/img/tree.jpg");
+    background-image: url("/img/treeboth.jpg");
 }
 
 /* Titles */
@@ -26,9 +26,11 @@ h2 {
 
 /* Paragraph & Typographic */
 p {
+    color: #CBFFCC;
     line-height: 28px;
     margin-bottom: 25px;
     font-size: 20px;
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
 .centered {
@@ -72,19 +74,41 @@ a:after {
     padding: 0;
 }
 
-.logo {
-	text-align: center;
-	margin-top: 25px;
-}
+
 
 h1 {
-	font-size: 70px;
+	font-size: 100px;
 }
 
 .w {
 	margin-top: 60px;
 }
 .w i {
-	font-size: 26px;
+	font-size: 40px;
 	padding: 12px;
 }
+
+.pagination>li>a {
+    color: #00F;
+}
+
+/*Resume CSS---------------*/
+
+
+
+.row .col-md-6 {
+    padding: 0;
+    
+}
+
+.box-item {
+    background-color: rgba(255,255,255,.10);
+}
+
+
+
+.resume-header
+{
+    font-size: 30px;
+}
+

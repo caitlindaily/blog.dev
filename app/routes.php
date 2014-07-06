@@ -16,33 +16,33 @@ Route::get('/resume', 'HomeController@showResume');
 
 Route::get('/portfolio', 'HomeController@showPortfolio');
 
+Route::resource('posts', 'PostsController');
 
 
 
+	
+// 	$post = Post::find(1);
+// 		echo $post->title . "<br>";
+// 	 	echo $post->body . "<br>";
+// 	$post->title = "This is a NEW Title";
+// 	$post->save();
 
-Route::get('/sayhello/{name}', function($name)
-{
-    if ($name == "Chris")
-    {
-        return Redirect::to('/');
-    }
-    else
-    {
-        return View::make('temp.my-first-view')->with('name', $name);
-    }
-});
+// });
 
-Route::get('/rolldice/{guess}', function($guess) {
+// Route::get('/sayhello/{name}', 'HomeController@sayHello');
 
-	$randNum = mt_rand(1, 6);
-	$data = [
-		'guess'=> $guess,
-		'randNum' => $randNum
-	];
 
-	return View::make('roll-dice')->with($data);
+// Route::get('/rolldice/{guess}', function($guess) {
 
-});
+// 	$randNum = mt_rand(1, 6);
+// 	$data = [
+// 		'guess'=> $guess,
+// 		'randNum' => $randNum
+// 	];
+
+// 	return View::make('roll-dice')->with($data);
+
+// });
 
 
 

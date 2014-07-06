@@ -41,6 +41,7 @@ class PostTableSeeder extends Seeder {
         $post = new Post();
         $post->title = "Post Title $i";
         $post->body = "Post Body $i";
+        $post->user_id = 1;
         $post->save();
     	}
     }

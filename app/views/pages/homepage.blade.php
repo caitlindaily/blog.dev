@@ -10,6 +10,9 @@
 			<div class="col-lg-8 col-lg-offset-2 w">
 				<h1>Caitlin Daily</h1>
                 <h2>Web Developer</h2>
+                <p>
+                	"An eloquent thirst for life and nothing but optimism."
+                </p>	
 			</div>
 		</div>
 	</div>

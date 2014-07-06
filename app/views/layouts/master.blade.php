@@ -34,6 +34,7 @@
 	
     @yield('content')
    
+    @section('toolbar')
    	  <!--Hyperlinks-->
     <div class="row centered">
         <div class="col-lg-8 col-lg-offset-2 w tooltip-demo">
@@ -49,6 +50,7 @@
     </div>
     <br>
     <br>
+    @stop
 	    <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->

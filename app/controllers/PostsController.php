@@ -22,9 +22,9 @@ class PostsController extends \BaseController {
 			$query->where('title', 'LIKE', "%$search%");
 		} 
 		$posts = $query->orderBy('created_at', 'desc')->paginate(5);
-		return View::make('posts.index')->with('posts', $posts);
+		return View::make('posts.index2')->with('posts', $posts);
 	}
-		
+        	
 
 	public function create()
 	{

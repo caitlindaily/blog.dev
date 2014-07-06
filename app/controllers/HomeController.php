@@ -30,6 +30,11 @@ class HomeController extends BaseController {
 		return View::make('portfolio');
 	}
 
+	public function showBlog()
+	{
+		return View::make('posts.create');
+	}
+
 	public function sayHello($name)
 	{
         $data = [
