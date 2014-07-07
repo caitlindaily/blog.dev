@@ -8,8 +8,10 @@
   <h4>{{{ $post->user->email }}}</h4>
   <h4>{{{ $post->created_at }}}</h4>
 	<p>{{{ $post->body }}}</p>
-  <br>	
-  {{ link_to_action('PostsController@edit', 'Edit this Post') }}
+  <br>
+  @if (Auth::check())	
+  {{ link_to_action('PostsController@edit', 'Edit this Post', null, array('class'=> 'btn btn-primary')) }}
+  @endif
 </div>
 
 @stop
