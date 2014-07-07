@@ -7,9 +7,6 @@ class PostsController extends \BaseController {
 	{
     // call base controller constructor
     	parent::__construct();
-
-    // run auth filter before all methods on this controller except index and show
-    	$this->beforeFilter('auth.basic', array('except' => array('index', 'show')));
 	}
 
 	public function index()
@@ -22,7 +19,7 @@ class PostsController extends \BaseController {
 			$query->where('title', 'LIKE', "%$search%");
 		} 
 		$posts = $query->orderBy('created_at', 'desc')->paginate(5);
-		return View::make('posts.index2')->with('posts', $posts);
+		return View::make('posts.index')->with('posts', $posts);
 	}
         	
 
@@ -44,6 +41,7 @@ class PostsController extends \BaseController {
 		} else {
 
 			$post = new Post();
+			$post->user_id = Auth::user()->id;
 			$post->title = Input::get('title');
 			$post->body = Input::get('body');
 			$post->save();
@@ -82,6 +80,7 @@ class PostsController extends \BaseController {
 		} else {
 
 			$post = new Post();
+			$post->user_id = Auth::user()->id;
 			$post->title = Input::get('title');
 			$post->body = Input::get('body');
 			$post->save();

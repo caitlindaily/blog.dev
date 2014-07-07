@@ -23,48 +23,40 @@
 </head>
 
 <body>
-    @if (Session::has('successMessage'))
-        <div class="alert alert-success">{{{ Session::get('successMessage') }}}</div>
-    @endif
-    @if (Session::has('errorMessage'))
-        <div class="alert alert-danger">{{{ Session::get('errorMessage') }}}</div>
-    @endif
 
 
-	
     @yield('content')
    
-    @section('toolbar')
+    
    	  <!--Hyperlinks-->
     <div class="row centered">
-        <div class="col-lg-8 col-lg-offset-2 w tooltip-demo">
-            <!-- <a data-toggle="tooltip" title="About Me" href="#"><i class="fa fa-heart"></i></a> -->
-            <a data-toggle="tooltip" title="Resume" href="/resume"><i class="fa fa-file-text"></i>
-            <a data-toggle="tooltip" title="Portfolio" href="/portfolio"><i class="fa fa-briefcase"></i></a>
-            <a data-toggle="tooltip" title="Twitter" href="http://twitter.com/CaitlinDaily8"><i class="fa fa-twitter"></i></a>
-            <a data-toggle="tooltip" title="LinkedIn" href="http://www.linkedin.com/pub/caitlin-daily/61/2a1/b87/"><i class="fa fa-linkedin"></i></a>
-            <a data-toggle="tooltip" title="My Github" href="http://www.github.com/sweetrocker22"><i class="fa fa-github-square"></i>
-            <a data-toggle="tooltip" title="Blog" href="/posts/"><i class="fa fa-comment"></i></a>
-            <a data-toggle="tooltip" title="Email Me!" href="mailto:cdaily87@gmail.com"><i class="fa fa-envelope"></i></a>
-        </div>
+      <div class="col-lg-8 col-lg-offset-2 w tooltip-demo">
+         <a data-toggle="tooltip" title="Resume" href="/resume"><i class="fa fa-file-text"></i>
+         <a data-toggle="tooltip" title="Portfolio" href="/portfolio"><i class="fa fa-briefcase"></i></a>
+         <a data-toggle="tooltip" title="Twitter" href="http://twitter.com/CaitlinDaily8"><i class="fa fa-twitter"></i></a>
+         <a data-toggle="tooltip" title="LinkedIn" href="http://www.linkedin.com/pub/caitlin-daily/61/2a1/b87/"><i class="fa fa-linkedin"></i></a>
+         <a data-toggle="tooltip" title="My Github" href="http://www.github.com/sweetrocker22"><i class="fa fa-github-square"></i>
+         <a data-toggle="tooltip" title="Blog" href="/posts/"><i class="fa fa-comment"></i></a>
+         <a data-toggle="tooltip" title="Email Me!" href="mailto:cdaily87@gmail.com"><i class="fa fa-envelope"></i></a>
+      </div>
     </div>
     <br>
     <br>
-    @stop
+    
 	    <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="/webpage_ext/js/bootstrap.min.js"></script>
 
-    @section('bottom-script')
+    
     <script>
         $('.tooltip-demo').tooltip({
           selector: "[data-toggle=tooltip]",
           container: "body"
         });
     </script>
-    @stop
+   
     
     <!--BACKSTRETCH-->
     <!-- You can use an image of whatever size. This script will stretch to fit in any screen size.-->

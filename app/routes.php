@@ -18,31 +18,15 @@ Route::get('/portfolio', 'HomeController@showPortfolio');
 
 Route::resource('posts', 'PostsController');
 
+Route::get('/login', 'HomeController@showLogin');
+
+Route::post('/login', 'HomeController@doLogin');
+
+Route::get('/logout', 'HomeController@logout');
 
 
 	
-// 	$post = Post::find(1);
-// 		echo $post->title . "<br>";
-// 	 	echo $post->body . "<br>";
-// 	$post->title = "This is a NEW Title";
-// 	$post->save();
 
-// });
-
-// Route::get('/sayhello/{name}', 'HomeController@sayHello');
-
-
-// Route::get('/rolldice/{guess}', function($guess) {
-
-// 	$randNum = mt_rand(1, 6);
-// 	$data = [
-// 		'guess'=> $guess,
-// 		'randNum' => $randNum
-// 	];
-
-// 	return View::make('roll-dice')->with($data);
-
-// });
 
 
 
