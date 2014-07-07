@@ -7,6 +7,8 @@ class PostsController extends \BaseController {
 	{
     // call base controller constructor
     	parent::__construct();
+
+    	$this->beforeFilter('auth', array('except' => array('index', 'show')));
 	}
 
 	public function index()
