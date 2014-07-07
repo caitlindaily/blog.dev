@@ -11,17 +11,21 @@
 	<title></title>
 </head>
 <body>
-  <div class="form-group">	
+<div class="container">	
+  <div class="form-group">
+  	<div class"form-control">	
 	{{ Form::open(array('action' => 'HomeController@doLogin')) }}	
-	  {{ Form::label('email', 'Email') }}
+	  {{ Form::label('email', 'Email') }}<br>
 	  {{ Form::email('email') }}
-		
-	  {{ Form::label('password', 'Password') }}
+	<br>	
+	  {{ Form::label('password', 'Password') }}<br>
 	  {{ Form::password('password') }}
 	
-	  {{ Form::submit('Submit') }}
+	  {{ Form::submit('Log In') }}
 	{{ Form::close() }}
-   </div> 
+</div>
+   </div>
+</div>    
 </body>
 </html>
 @stop
