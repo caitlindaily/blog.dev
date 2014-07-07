@@ -47,9 +47,13 @@ class PostsController extends \BaseController {
 			$post->title = Input::get('title');
 			$post->body = Input::get('body');
 			$post->save();
+			if (Input::hasFile('image') && Input::file('image')->isValid()) 
+			{
+				$post->addUploadedImage(Input::file('image'));
+				$post->save();
+			}
 			Session::flash('successMessage', 'Post was created successfully!!!');
 			return Redirect::action('PostsController@index');
-
 		}
 
 	}
@@ -86,6 +90,11 @@ class PostsController extends \BaseController {
 			$post->title = Input::get('title');
 			$post->body = Input::get('body');
 			$post->save();
+			if (Input::hasFile('image') && Input::file('image')->isValid()) 
+			{
+				$post->addUploadedImage(Input::file('image'));
+				$post->save();
+			}
 			Session::flash('successMessage', 'Your post was updated!!!');
 			return Redirect::action('PostsController@index');
 		}

@@ -4,10 +4,10 @@
 
 	@if(isset($post))
 	  <h1>Edit Post</h1>
-	   {{ Form::model($post, array('action' => array('PostsController@update', $post->id), 'method' => 'PUT')) }}
+	   {{ Form::model($post, array('action' => array('PostsController@update', $post->id), 'method' => 'PUT', 'files' => true)) }}
 	@else
 	  <h1>Create New Post</h1>
-	   {{ Form::open(array('action' => 'PostsController@store')) }}
+	   {{ Form::open(array('action' => 'PostsController@store', 'files' => true)) }}
 	@endif
 
 <!--Error/Success Message-->
@@ -24,6 +24,10 @@
 	<div>	
 	  {{ Form::label('body', 'Post Body') }}<br>
 	  {{ Form::textarea('body') }}
+	</div>	
+	<div>
+		{{ Form::label('image', 'Upload Image') }}
+		{{ Form::file('image') }}
 	</div>	
     <br>
 	  {{ Form::submit('Submit') }}

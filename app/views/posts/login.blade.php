@@ -13,7 +13,7 @@
 <body>
 <div class="container">	
   <div class="form-group">
-  	<div class"form-control">	
+  	
 	{{ Form::open(array('action' => 'HomeController@doLogin')) }}	
 	  {{ Form::label('email', 'Email') }}<br>
 	  {{ Form::email('email') }}
@@ -23,7 +23,6 @@
 	
 	  {{ Form::submit('Log In') }}
 	{{ Form::close() }}
-</div>
    </div>
 </div>    
 </body>

@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePostsTable extends Migration {
+class AddImagePath extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,12 +12,9 @@ class CreatePostsTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('posts', function($table)
+		Schema::table('posts', function(Blueprint $table)
 		{
-		    $table->increments('id');
-		    $table->string('title', 200);
-		    $table->string('body', 100);
-		    $table->timestamps();
+			$table->string('img_path', 200)->nullable();
 		});
 	}
 
@@ -28,7 +25,10 @@ class CreatePostsTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('posts');
+		Schema::table('posts', function(Blueprint $table)
+		{
+			$table->dropColumn('img_path');
+		});
 	}
 
 }
