@@ -9,7 +9,7 @@
   <h4>{{{ $post->created_at }}}</h4>
 	<p>{{{ $post->body }}}</p>
 	@if ($post->img_path)
-	   <img src="{{{ $post->img_path }}}"/>
+	   <img class="img-responsive" src="{{{ $post->img_path }}}"/>
 	@endif
   <br>
   @if (Auth::check())	
