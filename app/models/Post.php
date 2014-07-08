@@ -21,10 +21,13 @@ class Post extends BaseModel {
 
     public function addUploadedImage($image) {
 
-        $systemPath = public_path() . '/' . $this->imgDir . '/';
-        $imageName = $this->id . '-' . $image->getClientOriginalName();
+        //Creating path and directory for files to live--will live under public dir and then the name we give the next dir
+        $systemPath = public_path() . '/' . $this->imgDir . '/';//--> public/img-upload/
+        //To make image name unique, apply post id to the image's origianl name
+        $imageName = $this->id . '-' . $image->getClientOriginalName();//--> 2-image.jpg
+        //Need to move newly named image into image dir that was created
         $image->move($systemPath, $imageName);
-        //starts with slash because inside blog.dev, this directory format will point to where the image is located
+        //defines the image path. this is used when wanting to display image. ex:--> show.blade.php <img src="{{{ $post->img_path }}}"
         $this->img_path = '/' . $this->imgDir . '/' . $imageName;
     }
 
