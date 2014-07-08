@@ -7,7 +7,7 @@
   <hr>
   <h4>{{{ $post->user->email }}}</h4>
   <h4>{{{ $post->created_at }}}</h4>
-	<p>{{{ $post->body }}}</p>
+	<p>{{ $post->purifyParseBody() }}</p>
 	@if ($post->img_path)
 	   <img class="img-responsive" src="{{{ $post->img_path }}}"/>
 	@endif
