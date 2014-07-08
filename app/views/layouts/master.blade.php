@@ -1,45 +1,30 @@
 <!doctype html>
-
-<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="webpage_ext/ico/favicon.png">
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+  <link type="text/css" rel="stylesheet" href="/webpage_ext/css/icons.css">
+  @yield('top-script')
 
-    <title>C.Daily</title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="/webpage_ext/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/webpage_ext/css/font-awesome.min.css" rel="stylesheet">
-
-
-    <!-- Custom styles for this template -->
-    <link href="/webpage_ext/css/main.css" rel="stylesheet">
-    
-    <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600italic' rel='stylesheet' type='text/css'>
-</head>
-
+ </head> 
 <body>
 
 
     @yield('content')
    
-    
+    <div class="container">
    	  <!--Hyperlinks-->
     <div class="row centered">
-      <div class="col-lg-8 col-lg-offset-2 w tooltip-demo">
-         <a data-toggle="tooltip" title="Resume" href="/resume"><i class="fa fa-file-text"></i>
-         <a data-toggle="tooltip" title="Portfolio" href="/portfolio"><i class="fa fa-briefcase"></i></a>
-         <a data-toggle="tooltip" title="Twitter" href="http://twitter.com/CaitlinDaily8"><i class="fa fa-twitter"></i></a>
-         <a data-toggle="tooltip" title="LinkedIn" href="http://www.linkedin.com/pub/caitlin-daily/61/2a1/b87/"><i class="fa fa-linkedin"></i></a>
-         <a data-toggle="tooltip" title="My Github" href="http://www.github.com/sweetrocker22"><i class="fa fa-github-square"></i>
-         <a data-toggle="tooltip" title="Blog" href="/posts/"><i class="fa fa-comment"></i></a>
-         <a data-toggle="tooltip" title="Email Me!" href="mailto:cdaily87@gmail.com"><i class="fa fa-envelope"></i></a>
+      <div class="col-lg-8 col-lg-offset-2 w ">
+         <a title="Resume" href="/resume"><i class="fa fa-file-text"></i>
+         <a title="Portfolio" href="/portfolio"><i class="fa fa-briefcase"></i></a>
+         <a title="Twitter" href="http://twitter.com/CaitlinDaily8"><i class="fa fa-twitter"></i></a>
+         <a title="LinkedIn" href="http://www.linkedin.com/pub/caitlin-daily/61/2a1/b87/"><i class="fa fa-linkedin"></i></a>
+         <a title="My Github" href="http://www.github.com/sweetrocker22"><i class="fa fa-github-square"></i>
+         <a title="Blog" href="/posts/"><i class="fa fa-comment"></i></a>
+         <a title="Email Me!" href="mailto:cdaily87@gmail.com"><i class="fa fa-envelope"></i></a>
       </div>
     </div>
+  </div>
+
     <br>
     <br>
     
@@ -50,21 +35,11 @@
     <script src="/webpage_ext/js/bootstrap.min.js"></script>
 
     
-    <script>
-        $('.tooltip-demo').tooltip({
-          selector: "[data-toggle=tooltip]",
-          container: "body"
-        });
-    </script>
+
    
     
-    <!--BACKSTRETCH-->
-    <!-- You can use an image of whatever size. This script will stretch to fit in any screen size.-->
-    <script type="text/javascript" src="/webpage_ext/js/jquery.backstretch.min.js"></script>
-    <script>
-        $.backstretch("/webpage_ext/img/treeboth.jpg", {speed: 500});
-    </script>
+ @yield('bottom-script')
  
-    @yield('bottom-script')
+
 </body>
 </html>

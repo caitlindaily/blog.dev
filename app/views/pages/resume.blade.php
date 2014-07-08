@@ -1,19 +1,22 @@
-
-<!DOCTYPE html>
+@extends('layouts.master')
 <html>
 <head>
-<title>CDaily Resume</title>
+ @section('top-script') 
+<title>C.Daily Resume</title>
 
 <meta name="viewport" content="width=device-width"/>
 <meta charset="UTF-8"> 
 
 <link type="text/css" rel="stylesheet" href="/webpage_ext/CV-Template/style.css">
+ <link type="text/css" rel="stylesheet" href="/webpage_ext/css/resumeicons.css">
 <link href='http://fonts.googleapis.com/css?family=Rokkitt:400,700|Lato:400,300' rel='stylesheet' type='text/css'>
 
 <!--[if lt IE 9]>
 <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
 </head>
+@stop
+@section('content')
 <body id="top">
 <div id="cv" class="instaFade">
   <div class="mainDetails">
@@ -136,8 +139,7 @@
     </section>
     </div>
 </div>
-
-
+@stop
 </body>
 </html>
 
