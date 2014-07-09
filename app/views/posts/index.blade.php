@@ -5,7 +5,7 @@
 	<div class="row clearfix">
 		<div class="col-md-12 column">
 			<h2 class="text-primary text-center">All The Posts</h2>	
-				<table class="table table-striped">
+				<table class="table table-hover">
 				  <tr>	
 					<th>Title</th>
 					<th>Date Created</th>
@@ -37,10 +37,9 @@
 				{{ link_to_action('PostsController@create', 'Create New Post', null, array('class' => 'btn btn-primary')) }}
 				@endif
 				<!--Pagination-->
-				<div>	
-					{{ $posts->appends(['search'=> Input::get('search')])->links() }}
-				</div>
-		
+			  <div>	
+				{{ $posts->appends(['search'=> Input::get('search')])->links() }}
+			  </div>
 		</div>
 	</div>
 </div>
