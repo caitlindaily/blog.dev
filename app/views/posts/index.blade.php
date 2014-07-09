@@ -24,14 +24,15 @@
 
 					<!--Show Edit/Delete if Logged In-->  
 					  @if (Auth::check())
-					  <td>{{ link_to_action('PostsController@edit', 'Edit', $post->id) }}<br>
-					  	  {{ Form::open(array('action' => array('PostsController@destroy', $post->id), 'method' => 'DELETE')) }}
-							{{ Form::submit('Delete') }}
-					  	  {{ Form::close() }}</td>
+					  <td>{{ link_to_action('PostsController@edit', 'Edit', $post->id) }}
+					  	  <a href="#" class="deletePost btn btn-default btn-sm" data-postid="{{ $post->id }}">Delete</a></td>
 						@endif	
 				  </tr>
 				  	@endforeach		
 				</table>
+				<!--Hidden delete form-->
+				{{ Form::open(array('action' => 'PostsController@destroy', 'id' => 'deleteForm', 'method' => 'DELETE')) }}
+   				{{ Form::close() }}
 				<!--Create Post link if Logged In-->	
 				@if (Auth::check())
 				{{ link_to_action('PostsController@create', 'Create New Post', null, array('class' => 'btn btn-primary')) }}
@@ -43,6 +44,15 @@
 		</div>
 	</div>
 </div>
+<script type="text/javascript">
+   $(".deletePost").click(function() {
+       var postId = $(this).data('postid');
+       $("#deleteForm").attr('action', '/posts/' + postId);
+       if(confirm("Are you sure you want to delete this post?")) {
+           $('#deleteForm').submit();
+       }
+   });
+</script>
 </body>
 </html>
 @stop
