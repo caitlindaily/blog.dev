@@ -41,6 +41,11 @@ class HomeController extends BaseController {
 		return View::make('posts.login');
 	}
 
+	public function showProfile() 
+	{
+		return View::make('posts.profile');
+	}
+
 	public function doLogin()
 	{
 		$email = Input::get('email');

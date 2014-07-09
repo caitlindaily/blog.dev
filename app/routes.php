@@ -24,6 +24,8 @@ Route::post('/login', 'HomeController@doLogin');
 
 Route::get('/logout', 'HomeController@logout');
 
+Route::get('/profile', 'HomeController@showProfile');
+
 
 	
 
