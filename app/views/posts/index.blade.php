@@ -4,14 +4,7 @@
 <div class="container">
 	<div class="row clearfix">
 		<div class="col-md-12 column">
-			<h2 class="text-primary text-center">All The Posts</h2>
-				<!--Search Field-->
-				<h2>Search Posts by Title</h2>
-				<div>
-					{{ Form::open(array('action' => 'PostsController@index', 'method' => 'GET')) }}
-						{{ Form::text('search') }}
-				  	{{ Form::submit('Search') }}
-				</div>	
+			<h2 class="text-primary text-center">All The Posts</h2>	
 				<table class="table table-striped">
 				  <tr>	
 					<th>Title</th>
@@ -31,9 +24,9 @@
 
 					<!--Show Edit/Delete if Logged In-->  
 					  @if (Auth::check())
-					  <td>{{ link_to_action('PostsController@edit', 'Edit', $post->id, array('class' => 'btn btn-primary')) }}<br>
+					  <td>{{ link_to_action('PostsController@edit', 'Edit', $post->id) }}<br>
 					  	  {{ Form::open(array('action' => array('PostsController@destroy', $post->id), 'method' => 'DELETE')) }}
-							{{ Form::submit('Delete', array('class' => 'btn btn-danger')) }}
+							{{ Form::submit('Delete') }}
 					  	  {{ Form::close() }}</td>
 						@endif	
 				  </tr>
