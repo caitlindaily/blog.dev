@@ -76,6 +76,8 @@ class PostsController extends \BaseController {
 
 	public function update($id)
 	{
+		$post = Post::findOrFail($id);
+		$post->user_id = Auth::user()->id;
 		$validator = Validator::make(Input::all(), Post::$rules);
 
 		if ($validator->fails()) {
@@ -85,8 +87,6 @@ class PostsController extends \BaseController {
 
 		} else {
 
-			$post = new Post();
-			$post->user_id = Auth::user()->id;
 			$post->title = Input::get('title');
 			$post->body = Input::get('body');
 			$post->save();
