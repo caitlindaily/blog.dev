@@ -1,0 +1,33 @@
+.welcome-title {
+	margin-top: 10px;
+	padding-left: 20px;
+}
+
+.navbar {
+	border-radius: 0px;
+}
+
+.main-heading {
+
+	color: #A2D7E5;
+	font-family: 'Muli', sans-serif;
+	font-size: 65px;
+	padding: 25px 25px;
+	background: url(http://api.thumbr.it/whitenoise-361x370.png?background=2D3C40ff&noise=626262&density=100&opacity=21);
+	
+
+}
+body {
+	background: url(http://api.thumbr.it/whitenoise-361x370.png?background=5c6366ff&noise=626262&density=100&opacity=21);
+}
+a:hover {
+	color: #000;
+}
+.container {
+
+	background-color: rgba(255, 255, 255, 0.4);
+}
+a {
+	color: #1363A8;
+}
+
