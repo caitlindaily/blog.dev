@@ -1,10 +1,3 @@
-<html>
-<head>
-  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-  <!-- Latest compiled and minified JavaScript -->
-  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-</head>
-<body>
 <nav class="navbar navbar-default" role="navigation">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -28,7 +21,7 @@
        <!--Right NavBar-->     
           <ul class="nav navbar-nav navbar-right hover">
            @if (Auth::check())
-            <li><h3>{{ Auth::user()->email }}</h3></li>  
+            <li><h3 class="welcome-title">Welcome, <a href="{{ action('HomeController@showProfile') }}">{{ Auth::user()->first_name }}</a></h3></li>  
             <li>{{ link_to_action('PostsController@create', 'Create Post') }}</li>
             <li>{{ link_to_action('HomeController@logout', 'Log Out') }}</li>
            @else  
@@ -40,8 +33,3 @@
     </div>
   </div><!-- /.container-fluid -->
 </nav>
-</body>
-</html>
-
-
-
