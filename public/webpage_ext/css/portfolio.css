@@ -1,0 +1,10 @@
+body {
+	background: url(http://api.thumbr.it/whitenoise-361x370.png?background=5c6366ff&noise=626262&density=100&opacity=21);
+}
+
+.thumbnails {
+	margin-top: 20px;
+}
+.w {
+	margin-left: 325px;
+}
