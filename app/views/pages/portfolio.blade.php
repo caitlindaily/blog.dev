@@ -31,7 +31,7 @@
 	      <img src="/webpage_ext/img/todopic.jpg" alt="...">
 	      <div class="caption">
 	        <h3>ToDo List</h3>
-	        <p>...</p>
+	        <p>I made a basic todo list that adds items and then can be removed from a database. It was made with PHP, JQuery, HTML, and CSS.</p>
 	        <p><a href="#" class="btn btn-default" role="button">View</a></p>
 	      </div>
 	    </div>
