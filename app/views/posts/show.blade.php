@@ -9,7 +9,7 @@
       <h1>{{{ $post->title }}}</h1>
       <hr>
       <h4>{{{ $post->user->email }}}</h4>
-      <h4>{{{ $post->created_at }}}</h4>
+      <h4>{{{ $post->created_at->setTimezone('America/Chicago')->format('l, F jS Y @ h:i A') }}}</h4>
       <p>{{ $post->purifyParseBody() }}</p>
       @if ($post->img_path)
        <img class="img-responsive" src="{{{ $post->img_path }}}"/>

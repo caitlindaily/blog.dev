@@ -12,7 +12,7 @@
 			  <h1 class="main-heading text-center">The Daily Postings</h1>	
 				<div class="post-container">
 				 @foreach ($posts as $post) 
-				  <h2>{{ link_to_action('PostsController@show', $post->title, $post->id) }}</h2>
+				  <h2>{{ link_to_action('PostsController@show', $post->title, $post->slug) }}</h2>
 				   <p>Author: {{ $post->user->first_name}}, {{ $post->user->email }}</p>
 				   <p><span class="glyphicon glyphicon-time"></span> {{ $post->created_at->setTimezone('America/Chicago')->format('l, F jS Y @ h:i A') }}</p>	  
 				   <blockquote><p>{{ $post->purifyParseBody(true) }}</p></blockquote>
