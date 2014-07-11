@@ -18,7 +18,7 @@
 
 @section('content')
 <div class="container">
-<h1>Portfolio</h1>
+<h1>Groovy Things I Created</h1>
 </div>
 <hr>
 <body>
