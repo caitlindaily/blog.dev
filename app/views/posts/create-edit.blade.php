@@ -5,7 +5,7 @@
 	<div class="container">
 	@if(isset($post))
 	  <h1>Edit Post</h1>
-	   {{ Form::model($post, array('action' => array('PostsController@update', $post->id), 'method' => 'PUT', 'files' => true)) }}
+	   {{ Form::model($post, array('action' => array('PostsController@update', $post->slug), 'method' => 'PUT', 'files' => true)) }}
 	@else
 	  <h1>Create New Post</h1>
 	   {{ Form::open(array('action' => 'PostsController@store', 'files' => true)) }}
