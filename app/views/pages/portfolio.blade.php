@@ -31,8 +31,8 @@
 	      <img src="/webpage_ext/img/todopic.jpg" alt="...">
 	      <div class="caption">
 	        <h3>ToDo List</h3>
-	        <p>I made a basic todo list that adds items and then can be removed from a database. It was made with PHP, JQuery, HTML, and CSS.</p>
-	        <p><a href="#" class="btn btn-default" role="button">View</a></p>
+	        <p>I made a todo list that adds items and then can be removed from a database. It was made with PHP, JQuery, HTML, and CSS.</p>
+	        <p><a href="https://github.com/sweetrocker22/Web_Todo_List" class="btn btn-default" role="button">View GitHub</a></p>
 	      </div>
 	    </div>
 		  </div>
@@ -43,8 +43,8 @@
 			      <img src="/webpage_ext/img/whackpic.jpg" alt="...">
 			      <div class="caption">
 			        <h3>Whack-A-Mole</h3>
-			        <p>...</p>
-			        <p><a href="#" class="btn btn-default" role="button">View</a></p>
+			        <p>A 'whack-a-mole' concept game created while doing web exercises that involved using PHP, JQuery, HTML and CSS.</p>
+			        <p><a href="https://github.com/sweetrocker22/Codeup_Web_Exercises/tree/master/public" class="btn btn-default" role="button">View GitHub</a></p>
 			      </div>
 			    </div>
 			  </div>
@@ -55,8 +55,8 @@
 				      <img src="/webpage_ext/img/blogpic.jpg" alt="...">
 				      <div class="caption">
 				        <h3>Personal Blog</h3>
-				        <p>...</p>
-				        <p><a href="#" class="btn btn-default" role="button">View</a></p>
+				        <p>My blog was a back-to-front full stack project created by using the Laravel framework, MySQL database, PHP, JQuery, HTML, CSS, and Twitter Bootstrap.</p>
+				        <p><a href="https://github.com/sweetrocker22/blog.dev" class="btn btn-default" role="button">View GitHub</a></p>
 				      </div>
 				    </div>
 				  </div>
