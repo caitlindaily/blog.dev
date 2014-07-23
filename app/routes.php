@@ -26,6 +26,8 @@ Route::get('/logout', 'HomeController@logout');
 
 Route::get('/profile', 'HomeController@showProfile');
 
+Route::get('/whack', 'HomeController@showWhack');
+
 
 	
 

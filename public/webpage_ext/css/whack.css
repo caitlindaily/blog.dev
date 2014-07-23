@@ -1,0 +1,56 @@
+body {
+	background-image: url("/webpage_ext/img/drcox.jpg");
+}
+.box{
+	position: relative;
+	width: 150px;
+	height: 150px;
+	border: solid #00677F 1px;
+	float: left;
+}
+#box4 {
+	clear: both;
+	
+}
+#box7 {
+	clear: both;
+	
+}
+#main-div {
+	margin-left: 100px;
+	margin-top: 0px;
+}
+.boximage {
+	background-image: url("/webpage_ext/img/scrubs.jpg");
+	background-repeat: no-repeat;
+	cursor: pointer;
+	height: 150px;
+	width: 150px;
+}
+h2 {
+	font-size: 36px;
+	font-weight: bold;
+	font-family: 'Life Savers', cursive;
+	margin-left: 190px;
+	margin-top: 8px;
+	margin-bottom: 0px;
+}
+h3 {
+	font-family: 'Life Savers', cursive;
+	text-decoration: underline;
+	margin-left: 310px;
+	margin-bottom: 0px;
+	margin-top: 0px;
+}
+#score {
+	background-color: #AAA;
+	height: 20px;
+	width: 40px;
+	margin-left: 320px;
+	content: center;
+}
+
+
+
+
+

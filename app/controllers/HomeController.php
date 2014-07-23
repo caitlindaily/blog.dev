@@ -46,6 +46,11 @@ class HomeController extends BaseController {
 		return View::make('posts.profile');
 	}
 
+	public function showWhack() 
+	{
+		return View::make('pages.whack');
+	}
+
 	public function doLogin()
 	{
 		$email = Input::get('email');

@@ -17,7 +17,7 @@
       <br>
       @if (Auth::check()) 
        {{ link_to_action('PostsController@edit', 'Edit this Post', $post->id, array('class'=> 'btn btn-primary')) }}
-       <a href="#" class="deletePost btn btn-default btn-sm" data-postid="{{ $post->id }}">Delete</a></td>
+       {{ link_to_action('PostsController@destroy', 'Edit this Post', $post->id, array('class'=> 'btn btn-danger')) }}
       @endif
       <!--Comment Area-->
       <div id="disqus_thread"></div>
