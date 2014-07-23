@@ -44,7 +44,7 @@
 			      <div class="caption">
 			        <h3>Whack-A-Mole</h3>
 			        <p>A 'whack-a-mole' concept game created while doing web exercises that involved using PHP, JQuery, HTML and CSS.</p>
-			        <p><a href="https://github.com/sweetrocker22/Codeup_Web_Exercises/tree/master/public" class="btn btn-default" role="button">View GitHub</a></p>
+			        <p><a href="/whack" class="btn btn-default" role="button">Play!</a><a href="https://github.com/sweetrocker22/Codeup_Web_Exercises/tree/master/public" class="btn btn-default" role="button">View Github</a></p>
 			      </div>
 			    </div>
 			  </div>
