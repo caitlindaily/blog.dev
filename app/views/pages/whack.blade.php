@@ -6,10 +6,13 @@
 	<link href='http://fonts.googleapis.com/css?family=Life+Savers:400,700' rel='stylesheet' type='text/css'>
 </head>
 <body>
+
+<div class="heading">	
   <h2>Whack-A-Newbie</h2>
    <h3>Score</h3>
     <div id="score" ></div>
-
+</div>
+ 
   <div id="main-div">
 	<div id="box1" class="box"><img class="boximage"style="display:none;"></div>
 	<div id="box2" class="box"><img class="boximage"style="display:none;"></div>
@@ -20,7 +23,8 @@
 	<div id="box7" class="box"><img class="boximage"style="display:none;"></div>
 	<div id="box8" class="box"><img class="boximage"style="display:none;"></div>
 	<div id="box9" class="box"><img class="boximage"style="display:none;"></div>
-  </div>	
+   </div>	
+	
 
 <script src="/webpage_ext/js/jquery2.1.1.js"></script>
 <script>
