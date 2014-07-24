@@ -26,15 +26,7 @@
 		  </div>
 	  </div>
   </div>
-<script type="text/javascript">
-$(".deletePost").click(function() {
-   var postId = $(this).data('postid');
-   $("#deleteForm").attr('action', '/posts/' + postId);
-   if(confirm("Are you sure you want to delete this post?")) {
-       $('#deleteForm').submit();
-   }
-});
-</script>
+
 </body>
 @stop
 </html>

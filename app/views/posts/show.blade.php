@@ -17,7 +17,7 @@
       <br>
       @if (Auth::check()) 
        {{ link_to_action('PostsController@edit', 'Edit this Post', $post->id, array('class'=> 'btn btn-primary')) }}
-       {{ link_to_action('PostsController@destroy', 'Edit this Post', $post->id, array('class'=> 'btn btn-danger')) }}
+       {{ link_to_action('PostsController@destroy', 'Delete', $post->id, array('class'=> 'btn btn-danger deletePost')) }}
       @endif
       <!--Comment Area-->
       <div id="disqus_thread"></div>
@@ -40,5 +40,14 @@
 <!--Hidden delete form-->
 {{ Form::open(array('action' => 'PostsController@destroy', 'id' => 'deleteForm', 'method' => 'DELETE')) }}
 {{ Form::close() }}
+<script type="text/javascript">
+$(".deletePost").click(function() {
+   var postId = $(this).data('postid');
+   $("#deleteForm").attr('action', '/posts/' + postId);
+   if(confirm("Are you sure you want to delete this post?")) {
+       $('#deleteForm').submit();
+   }
+});
+</script>
 
 @stop
