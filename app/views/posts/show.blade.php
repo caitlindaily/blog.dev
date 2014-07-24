@@ -38,12 +38,12 @@
   </div>
 </div>
 <!--Hidden delete form-->
-{{ Form::open(array('action' => 'PostsController@destroy', 'id' => 'deleteForm', 'method' => 'DELETE')) }}
+{{ Form::open(array('action' => array('PostsController@destroy', $post->id), 'id' => 'deleteForm', 'method' => 'delete')) }}
 {{ Form::close() }}
+<!--Script for deleting post-->
 <script type="text/javascript">
-$(".deletePost").click(function() {
-   var postId = $(this).data('postid');
-   $("#deleteForm").attr('action', '/posts/' + postId);
+$(".deletePost").click(function(e) {
+  e.preventDefault();
    if(confirm("Are you sure you want to delete this post?")) {
        $('#deleteForm').submit();
    }
