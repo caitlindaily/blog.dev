@@ -46,10 +46,10 @@
         </div>
         
         <div class="sectionContent">
-          <p>So I've recently discovered a whole new world called "web development" and decided to change my career path. Up until now, I always
+          <p>I've recently discovered a whole new world called "web development" and decided to change my career path. Up until now, I always
             thought I wanted a career in the medical field but realized I didn't have a passion for it. This magical language of coding
             has become my new true passion. I am available to hire for full time. I'm looking for a person/company that will 
-            mentor and invest in me to transcend my skills and make me a truly valuable member.  
+            mentor and invest in me to develop my skills and transform me into a truly valuable member.  
           </p>
         </div>
       </article>
@@ -108,7 +108,6 @@
       <div class="sectionContent">
         <article>
           <h2>Laser Technician</h2>
-          <p class="subDetails">Clarify</p>
           <p class="subDetails"> February 2013 - May 2014 </p>
           <p class="subDetails"> June 2009 - January 2011</p>
           <p> I was able to deliver exceptional laser service to clients while also assessing cosmetic needs. 
@@ -123,14 +122,14 @@
           <h2>Nuclear Medicine Intern</h2>
           <p class="subDetails">January 2012 - December 2012</p>
           <p>I prepared and administered radioactive chemical compounds, performed patient imaging procedures using sophisticated 
-            radiation-detecting instrumentation and ran quality assurance protocols on camera daily/weekly.I was fortunate to have 
+            radiation-detecting instrumentation and ran quality assurance protocols on camera daily/weekly. I was fortunate to have 
             training in PET/CT. I accomplished computer processing and image enhancement and provided images, data analysis, and 
             patient information to the physician for diagnostic interpretation.
           </p>
         </article>
         
         <article>
-          <h2>Teller</h2>
+          <h2>Bank Teller</h2>
           <p class="subDetails">November 2007 - July 2008</p>
           <p>I managed individual and commercial accounts of up to $100K, ensured the confidentiality of client account
            information, and dispensed cashier checks and money orders through proper procedure.</p>
