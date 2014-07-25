@@ -67,6 +67,7 @@
         <li>Apache</li>
         <li>MySQL</li>
         <li>PHP</li>
+        <li>Git + GitHub</li>
         <li>Javascript + JQuery</li>
         <li>Laravel framework</li>
         <li>HTML/CSS</li>
