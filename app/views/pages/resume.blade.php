@@ -21,7 +21,7 @@
 <div id="cv" class="instaFade">
   <div class="mainDetails">
     <div id="headshot" class="quickFade">
-      <img src="/webpage_ext/CV-Template/headshot.jpg" alt="Caitlin Daily" />
+      <img src="/webpage_ext/CV-Template/Caitlin2.jpg" alt="Caitlin Daily" />
     </div>
     
     <div id="name">
