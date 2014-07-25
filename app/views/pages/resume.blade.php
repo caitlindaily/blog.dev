@@ -70,7 +70,7 @@
         <li>Javascript + JQuery</li>
         <li>Laravel framework</li>
         <li>HTML/CSS</li>
-        <li>"Vagrant" virtual machine</li>
+        <li>Vagrant virtual machine</li>
       </ul>
     </div>
     <div class="clear"></div>
