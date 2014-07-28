@@ -1,7 +1,6 @@
 @extends('layouts.master')
-<html>
-<head>
- @section('top-script') 
+
+@section('top-script') 
 <title>C.Daily Resume</title>
 
 <meta name="viewport" content="width=device-width"/>
@@ -11,13 +10,10 @@
  <link type="text/css" rel="stylesheet" href="/webpage_ext/css/resumeicons.css">
 <link href='http://fonts.googleapis.com/css?family=Rokkitt:400,700|Lato:400,300' rel='stylesheet' type='text/css'>
 
-<!--[if lt IE 9]>
-<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-<![endif]-->
-</head>
 @stop
+
 @section('content')
-<body id="top">
+
 <div id="cv" class="instaFade">
   <div class="mainDetails">
     <div id="headshot" class="quickFade">
@@ -33,6 +29,7 @@
       <ul>
         <li>e: <a href="mailto:cdaily87@gmail.com.com" target="_blank">cdaily87@gmail.com</a></li>
         <li>p: 8066783525</li>
+        <li>github: <a href="http://www.github.com/sweetrocker22">sweetrocker22</a></li>
       </ul>
     </div>
     <div class="clear"></div>
@@ -46,7 +43,7 @@
         </div>
         
         <div class="sectionContent">
-          <p>I've recently discovered a whole new world called "web development" and decided to change my career path. Up until now, I always
+          <p>I've recently discovered a whole new world called web development and decided to change my career path. Up until now, I always
             thought I wanted a career in the medical field but realized I didn't have a passion for it. This magical language of coding
             has become my new true passion. I am available to hire for full time. I'm looking for a person/company that will 
             mentor and invest in me to develop my skills and transform me into a truly valuable member.  
@@ -58,7 +55,7 @@
 
     <section>
     <div class="sectionTitle">
-      <h1>Key Skills</h1>
+      <h1>Developer Skills</h1>
     </div>
     
     <div class="sectionContent">
@@ -140,8 +137,7 @@
     </div>
 </div>
 @stop
-</body>
-</html>
+
 
 
 

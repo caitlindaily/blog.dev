@@ -64,7 +64,8 @@
 		    </div>
 	</div>
 	<!---Second Row-->
-		<div class="row">
+	<div class="row">
+		<!--First Box-->
 		  <div class="col-sm-6 col-md-4">
 		    <div class="thumbnail">
 		      <img src="/webpage_ext/img/prosifter.jpg" alt="...">
@@ -72,11 +73,24 @@
 		        <h3>proSifter.com</h3>
 		        <p>A web app that allows a user to search and sift through companies and their reviews. Users can see an average rating for each company and rate them themselves. If they sign up as a user, their personal review can be recorded for a specific company. An administration page was made available to manage users for the app as well.
 					It was built using PHP, JQuery with AJAX, HTML, CSS and Twitter Bootstrap. GitHub and Git were used for version control and was created in a Vagrant environment.</p>
-		        <p><a href="http://www.prosifter.com" class="btn btn-default" role="button">View Website</a><a href="https://github.com/sweetrocker22/prosifter" class="btn btn-default" role="button">View Github</a></p>
+		        <p><a href="https://www.prosifter.com" class="btn btn-default" role="button">View Website</a><a href="https://github.com/sweetrocker22/prosifter" class="btn btn-default" role="button">View Github</a></p>
+		      </div>
+		    </div>
+		  </div>
+			<!--Second Box-->
+		<div class="row">
+		  <div class="col-sm-6 col-md-4">
+		    <div class="thumbnail">
+		      <img src="/webpage_ext/img/chrome.jpg" alt="...">
+		      <div class="caption">
+		        <h3>"Everything is Awesome" chrome extension</h3>
+		        <p>I created a chrome extension that will play the "Everything is Awesome song. It was created using HTML and JSON.</p>
+		        <p><a href="http://chrome.google.com/webstore/detail/everything-is-awesome/okadogimmiabfkmomanboihcamdejgbh" class="btn btn-default" role="button">Chrome Store</a><a href="http://github.com/sweetrocker22/Chrome-Extension" class="btn btn-default" role="button">View Github</a></p>
 		      </div>
 		    </div>
 		  </div>
 		</div>
+	</div>
 </div>
 </div>
 </body>
