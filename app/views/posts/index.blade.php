@@ -15,7 +15,7 @@
 				  <h2>{{ link_to_action('PostsController@show', $post->title, $post->slug) }}</h2>
 				   <p>Author: {{ $post->user->first_name}}, {{ $post->user->email }}</p>
 				   <p><span class="glyphicon glyphicon-time"></span> {{ $post->created_at->setTimezone('America/Chicago')->format('l, F jS Y @ h:i A') }}</p>	  
-				   <blockquote><p>{{ $post->purifyParseBody(true) }}</p></blockquote>
+				   <blockquote><p>{{ $post->preview() }}</p></blockquote>
 				   <hr>
 				  @endforeach
 				</div>

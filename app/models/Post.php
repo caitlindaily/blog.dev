@@ -31,16 +31,20 @@ class Post extends BaseModel {
         $this->img_path = '/' . $this->imgDir . '/' . $imageName;
     }
 
-    public function purifyParseBody($truncate = false)
+    public function purifyParseBody()
     {
         //Purifying HTML to protect
-        $body = $truncate ? substr($this->body, 0, 100) : $this->body;
-        $dirty_html = Parsedown::instance()->parse($body);
+        $dirty_html = Parsedown::instance()->parse($this->body);
         $config = HTMLPurifier_Config::createDefault();
         $purifier = new HTMLPurifier($config);
         $clean_html = $purifier->purify($dirty_html);
         //Parsing body input, converting to HTML
         return $clean_html;
+    }
+
+    public function preview() 
+    {
+        return substr($this->body, 0, 100);
     }
 
     public function setSlugAttribute ($title) 

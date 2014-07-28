@@ -75,9 +75,9 @@ class PostsController extends \BaseController {
 	}
 
 
-	public function update($id)
+	public function update($slug)
 	{
-		$post = Post::findOrFail($id);
+		$post = Post::findBySlug($slug);
 		$post->user_id = Auth::user()->id;
 		$validator = Validator::make(Input::all(), Post::$rules);
 
