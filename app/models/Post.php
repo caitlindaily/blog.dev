@@ -44,7 +44,7 @@ class Post extends BaseModel {
 
     public function preview() 
     {
-        return substr($this->body, 0, 100);
+        return substr($this->body, 0, 100) . "...";
     }
 
     public function setSlugAttribute ($title) 
