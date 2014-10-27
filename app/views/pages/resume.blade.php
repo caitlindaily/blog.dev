@@ -104,6 +104,12 @@
       
       <div class="sectionContent">
         <article>
+          <h2>Web Developer</h2>
+          <p class="subDetails"> August 2014 - Present </p>
+          <p>My responsibilities involved quality assurance tasks including creating smoke tests for our application, debug exceptions, document and recreate exceptions in order to fix them, and testing our application on staging and production. I was expected to handle customer support tickets that involved export requests and various customer issues. During these implementations I was also involved in feature development as our application progressed and developing corresponding unit tests. 
+          </p>
+        </article>
+        <article>
           <h2>Laser Technician</h2>
           <p class="subDetails"> February 2013 - May 2014 </p>
           <p class="subDetails"> June 2009 - January 2011</p>
